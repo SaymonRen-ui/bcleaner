@@ -1,0 +1,4 @@
+customtkinter==6.0.0
+Pillow==12.3.0
+send2trash==2.1.0
+psutil==7.2.2
