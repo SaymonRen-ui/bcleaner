@@ -149,6 +149,18 @@ class BCleanerApp(ctk.CTk):
         self.title("BCleaner — чистка и оптимизация ПК")
         self.geometry("1180x720")
         self.minsize(1000, 620)
+        # Иконка окна/таскбара: только iconbitmap — CTk при старте затирает
+        # iconphoto своей CustomTkinter_icon_Windows.ico.
+        # В собранном exe ресурсы лежат в sys._MEIPASS (--add-data assets),
+        # в исходниках — в корне проекта.
+        try:
+            import sys as _sys
+            _res = Path(_sys._MEIPASS) if getattr(_sys, "frozen", False) else _base_dir()
+            _ico = _res / "assets" / "icon.ico"
+            if _ico.is_file():
+                self.iconbitmap(str(_ico))
+        except Exception:
+            pass
 
         self.cfg = cfg
         self.all_apps: list[apps_core.AppInfo] = []

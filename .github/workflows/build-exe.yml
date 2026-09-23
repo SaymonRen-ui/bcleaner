@@ -23,7 +23,7 @@ jobs:
           pip install -r requirements.txt pyinstaller
 
       - name: Build EXE
-        run: pyinstaller --noconfirm --clean --windowed --onefile --name BCleaner --icon assets\icon.ico --collect-all customtkinter main.py
+        run: pyinstaller --noconfirm --clean --windowed --onefile --name BCleaner --icon assets\icon.ico --add-data "assets;assets" --collect-all customtkinter main.py
 
       - name: Release
         uses: softprops/action-gh-release@v2

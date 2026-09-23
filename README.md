@@ -22,7 +22,7 @@ python main.py
 ```powershell
 pip install pyinstaller
 pyinstaller --noconfirm --clean --windowed --onefile --name BCleaner `
-  --icon assets\icon.ico --collect-all customtkinter main.py
+  --icon assets\icon.ico --add-data "assets;assets" --collect-all customtkinter main.py
 ```
 Готовый файл: `dist\BCleaner.exe` (один файл, запускается без Python).
 
