@@ -1,6 +1,8 @@
 # BCleaner
 Современный cleaner для Windows: удаление программ с поиском остатков, чистка мусора, аналитика диска. Тёмная / светлая тема.
 
+![Главное окно](screenshots/main.png)
+
 ## Возможности
 - **Программы**: список из реестра (HKLM/HKCU, x64/x32), поиск, тихое/обычное удаление, поиск остатков (файлы + реестр) и их удаление.
 - **Очистка**: Windows Temp, User Temp, Prefetch, Корзина, Delivery Optimization, логи, WER-отчёты, thumbnail-кэш, shader-кэш, кэши Chrome/Edge/Firefox.
